@@ -1,0 +1,14 @@
+{
+    "name": "pubsub-source1",
+    "config": {
+        "connector.class": "io.confluent.connect.gcp.pubsub.PubSubSourceConnector",
+        "tasks.max": "1",
+        "kafka.topic": "customerinfo",
+        "gcp.pubsub.project.id": "REACTED_PROJECT_ID", 
+        "gcp.pubsub.topic.id": "customerinfo",
+        "gcp.pubsub.subscription.id": "customerinfo-sub",
+        "gcp.pubsub.credentials.path": "/home/appuser/REACTED_KEY_NAME.json",
+        "confluent.topic.bootstrap.servers": "kafka1:29092, kafka2:29092, kafka3:29092",
+        "confluent.topic.replication.factor": "3"
+    }
+}
